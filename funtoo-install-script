@@ -3,17 +3,17 @@
 # A script to install Funtoo Linux on a computer
 
 echo We will now start installing Funtoo Linux on this computer!
-echo We wiil start by partitioning the hard disk.
+echo We will start by partitioning the hard disk.
 cfdisk
 echo Now, we will create the filesystems.
 echo Please enter the root partition. Eg. /dev/sda?
-read root-partition
-mkfs.jfs $root-partition
+read rootpartition
+mkfs.jfs $rootpartition
 # echo Please enter the swap partition. Eg. /dev/sda?
 # read swap-partition
 # mkswap $swap-partition
 # swapon $swap-partition
 echo It is time to mount the filesystems.
-mkdir /mnt/Funtoo
-mount $root-partition /mnt/Funtoo
-
+mkdir /mnt/funtoo
+mount $rootpartition /mnt/funtoo
+cd /mnt/funtoo
