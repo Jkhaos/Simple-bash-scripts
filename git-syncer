@@ -1,0 +1,10 @@
+echo This is the file in this directory:
+ls -l
+echo Please name the file you want to sync:
+read tosyncfile
+git add $tosyncfile
+echo Give comment to committed file.
+read comment
+git commit -m "$comment"
+git push -u origin master
+
