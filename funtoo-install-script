@@ -23,10 +23,10 @@ mount $rootpartition /mnt/funtoo
 
 cd /mnt/funtoo
 echo Now, we will download the stage 3 file.
-wget http://ftp.heanet.ie/mirrors/funtoo/funtoo-current/x86-64bit/corei7/stage3-latest.tar.xz
+wget http://build.funtoo.org/funtoo-current/x86-64bit/core2_64/stage3-latest.tar.xz
 
 echo We will extract the downloaded file.
-tar xJpf stage3-latest.tar.xz
+tar xJpvf stage3-latest.tar.xz
 
 echo It is time to chroot into Funtoo linux.
 mount --bind /proc proc
@@ -40,7 +40,7 @@ emerge --sync
 
 echo Time to configure the system.
 nano -w /etc/fstab
-ln -sf /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
+ln -sf /usr/share/zoneinfo/America/Cuiaba /etc/localtime
 nano -w /etc/portage/make.conf 
 nano -w /etc/conf.d/hwclock
 eselect profile replace 7 8
